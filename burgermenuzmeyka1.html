@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <script>
+   function digitalClock() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+       //* добавление ведущих нулей */
+      if (hours < 10) hours = "0" + hours;
+      if (minutes < 10) minutes = "0" + minutes;
+      if (seconds < 10) seconds = "0" + seconds;
+        document.getElementById("m11").innerHTML = hours + ":" + minutes + ":" + seconds;
+        setTimeout("digitalClock()", 1000);
+   }
+  </script>
+  <link rel="stylesheet" href="chasy.html">
+<title>Меню</title>
+
+<style>
+.space { 
+    padding: 20px; /* Поля */
+    background-color: blueviolet; /* Цвет фона */
+    border: 2px solid #yellow; /* Параметры рамки */
+  }
+  #m111 {
+    border: 5px solid;
+    border-radius: 10px;
+    border-color: skyblue;
+   background-color: blueviolet;
+  }
+
+  #m11 {
+  
+    color: white;
+    font-size: 250%;
+  }
+  p {
+    background: url(img/murad.jpg);
+    height: 30px;
+  }
+  i {
+    background: url(img/murad.jpg);
+  }
+html {
+    min-height: 100%
+    }
+body {
+  background: url(img/murad.jpg);
+    min-height: 100%;
+	margin:0;
+	padding:0;
+	font: 15px Tahoma;
+	color:white;
+    }
+#top{
+	width:100%;
+	background:url(img/murad.jpg);
+	text-align:center;
+	height:25px;
+	line-height:25px;
+	}
+#top a{color:white;text-decoration:none;}
+.logo{
+	width:200px;
+	font: 22px/125% Tahoma;
+	float:left;
+	line-height:35px;
+	}
+.logo span{font: 12px/125% Tahoma;}
+ 
+ .wrapper{
+  top: 0;
+	max-width: 500px;
+	margin: 0 auto;
+	position:absolute;
+}
+
+ 
+ 
+.menu-btn{
+  display: block;
+  position: relative;
+  top: 0;
+  right:-150%;
+  transform:translate(3500%,0);
+  width: 40px;
+  height: 25px;
+  cursor: pointer;
+
+}
+ 
+ 
+ 
+ 
+ 
+#menu-toggle{
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  left: 0;
+}
+
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  transition-duration: .25s;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menubox{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background: url(img/murad.jpg);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu-item:hover {
+  background-color: #CFD8DC;
+}
+
+
+</style>
+ 
+
+</head>
+<body>
+<div id="top">
+<!--<div class="logo"><a  href="#">Yunusov Muradjan<span style="color: red;">inst;myunusov_off</span></a></div>-->
+<i style="background: url(img/murad.jpg);">Юнусов Мураджан УЧКУНОВИЧ ИС 21-2(КарГу)<br><br></i>
+<a id="m111" href="mailto:muradjanyunusov@mail.ru" title="Напишите нам в почту">Напишите нам в почту</a>
+
+<br>
+<br>
+<br>
+<div class="wrapper">
+<div class="burger-menu">
+    <input id="menu-toggle" type="checkbox" />
+    <label class="menu-btn" for="menu-toggle">
+      <span></span>
+    </label>
+
+    <ul class="menubox">
+			<li><a class="menu-item" href="zmeyka.html"><p>Змейкa</p></a></li>
+      <li><a class="menu-item" href="kalkulator.html"><p>Калькулятор</p></a></li>
+			<li><a class="menu-item" href="contacts.html"><p>Контакты</p></a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="m11"></div>
+  <script>digitalClock();</script><br><hr>
+   <div class="space">
+   Двадцать пять процентов времени программирования с нуля – это размышления о том, как будет вести себя пользователь
+  </div>
+  Программирование – это размышление, а не печатание.
+   <details><summary>Подробнее</summary><br><hr>
+  По большей части мы программируем, когда спим, гуляем, смотрим в окно, или делаем что-то ещё, что позволяет нам расслабиться и думать. Расслабление – один из важных аспектов программирования. Нельзя просто сесть и написать тысячу строк кода и вставить их в программу. Нам необходимо посидеть, походить, подумать. Придумать концепцию, исправить её недостатки, решить, как она будет работать… Расслабление – единственный способ, которым мы можем пользоваться для исправления проблем.<br><hr>
+</body>
+</html>
